@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabletop Commander</title>
+        {% block static_assets %}
+            <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
+            <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}" />
+            <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}" />
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        {% endblock %}
+    </head>
+    <body>
+        <header class="full-container">
+            <a href="{% url 'base:home' %}">
+                <h1>
+                    Tabletop Commander
+                </h1>
+            </a>
+        </header>
+        <div id="content" class="full-container">
+            {% block content %}{% endblock %}
+        </div>
+        <footer class="full-container">
+            &copy; tabletop commander
+        </footer>
+    </body>
+</html>

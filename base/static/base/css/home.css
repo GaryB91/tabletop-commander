@@ -1,20 +1,69 @@
-h1 {
-    text-align: center;
-    color: red;
+.content-box {
+    border-radius: 5px;
+    border: solid 1px #000000;
+    margin: 0 1%;
+    background-color: #188C77;
 }
 
-#heading-blurb{
-    text-align: center;
+#content {
+    overflow: auto;
 }
-#canvas{
-    width: 500px;
-    height: 250px;
-    border-style: solid;
-    border-color: #ff0000 #0000ff;
+.login-signup {
+    width: 33%;
+    float: right;
+    margin-left: 0.5%;
+}
+.intro {
+    width: 64%;
+    float: left;
+    margin-right: 0.5%;
 }
 
-.movable{
-    background-color: blue;
-    width: 25px;
-    height: 25px;
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+#content:before,
+#content:after {
+  content: "";
+  display: table;
+}
+#content:after {
+  clear: both;
+}
+#content {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+==================================
+Typography
+==================================
+*/
+.text {
+    color: #FFFCED;
+    font-family: 'Nunito', san-serif;
+}
+
+.text-centre {
+    text-align: center;
+}
+/*
+==================================
+Buttons
+==================================
+*/
+
+.btn {
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0;
+}
+.btn-alt {
+    width: 115px;
+    border: solid 1px black;
+    padding: 10px 20px;
+    text-decoration: none;
 }

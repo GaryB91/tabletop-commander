@@ -1,21 +1,32 @@
-{% extends "base/base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block static_assets %}
     {{ block.super }}
-    <link rel="stylesheet" type="text/css" href="{% static 'base/css/home.css' %}" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script src="//cdn.jsdelivr.net/interact.js/1.2.6/interact.min.js"></script>
-    <script type="text/javascript" src="{% static 'base/js/home.js' %}"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'base/css/home.css' %}" />
 {% endblock %}
 
 {% block content %}
-<h1>Welcome to Tabletop Commander</h1>
-<p id="heading-blurb">
-    We provide you the tools to make your next game as easy and fun as ready, aim, fire!!!
-</p>
-
-<div id="canvas">
-    <div id="movable-1" class="movable"></div>
-</div>
+<section class="content-box intro">
+    <div class="container">
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non venenatis elit, eu congue dui. Nunc posuere lectus quis libero pharetra gravida. Fusce id enim egestas, tincidunt ligula eget, ultricies magna. Integer ut congue nibh. Curabitur tempus justo eget condimentum tristique. Integer pellentesque, nisi at bibendum iaculis, sapien tortor facilisis libero, a commodo augue massa eu felis. Duis auctor semper arcu, vitae sollicitudin felis dapibus et. Donec molestie nibh sit amet turpis varius accumsan. Nulla iaculis sit amet orci sit amet interdum. Fusce et dui porttitor ligula pulvinar sagittis in ut tellus. Vestibulum vel fermentum felis. Duis a efficitur massa, vitae accumsan tellus.
+        </p>
+    </div>
+</section>
+<aside class="content-box login-signup">
+    <div class="container">
+        <a href="{% url 'authentication:login' %}" class="btn btn-alt">
+            <div class="btn-content">
+                <span class="text text-centre">Login</span>
+            </div>
+        </a>
+        <p class="text text-centre">Or</p>
+        <a href="{% url 'authentication:signup' %}" class="btn btn-alt">
+            <div class="btn-content">
+                <span class="text text-centre">Sign up</span>
+            </div>
+        </a>
+    </div>
+</aside>
 {% endblock %}
